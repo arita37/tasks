@@ -1,0 +1,46 @@
+
+
+create task folder in github.
+
+
+Server will donwload it
+and put it in S3 server.
+
+Start Spot instance to run code.
+
+and save back into github
+
+
+/tasks/
+  /t_test01/
+     /out/
+
+in Main Server  :
+/taskgit/
+    Pull every 1 mins
+    copy to S3, new folder
+    
+
+Task pick up from S3:
+and save back
+    load task_out
+    save in task_out
+    commit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
