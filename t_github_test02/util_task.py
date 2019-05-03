@@ -16,7 +16,7 @@ from time import sleep
 ####################################################################################################
 
 
-task_cpu   = 2
+task_cpu_required   = 2  #  Nb of CPU required for this task....
 taskout_s3_root    =  "/home/ubuntu/zs3drive/tasks_out/" 
 taskout_local_root = "/home/ubuntu/tasks_out/" 
 
