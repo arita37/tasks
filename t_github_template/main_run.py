@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-manual test :
-   python zs3drive/tasks/t_github_test02/main.py
+python zs3drive/tasks/t_github_test02/main.py
 
 
 Folders :
-   taskout_local    : /home/ubuntu/tasks_out/thistask_folder
-   taskout_s3_root  : /home/ubuntu/zs3drive/tasks_out/  
-   taskout_s3       : /home/ubuntu/zs3drive/tasks_out/thistask_folder  
+ task_name :    mytask
+  taskout_local   :  /home/ubuntu/tasks/mytask/
+  taskout_s3_root :  /home/ubuntu/zs3tasks/tasks/
+  
 
 
 """
@@ -15,13 +15,13 @@ import os, sys
 from time import sleep
 
 ####################################################################################################
-from util_task import task_name, taskout_local, taskout_s3_root, os_copy_local_to_s3     
+from util_taskconfig import task_name, taskout_local, taskout_s3_root, os_copy_local_to_s3     
 
 
 
 
 ####################################################################################################
-out_file =  taskout_local + "/myoutput.txt"
+out_file =  taskout_local + "myoutput.txt"
 
 
 with open(out_file, mode="a") as f :
@@ -51,7 +51,9 @@ with open(out_file, mode="a") as f :
 os_copy_local_to_s3( taskout_local, taskout_s3_root ) 
 
 
-
+#### Rename taks folder
+# os_rename_task(task_name, taskout_s3_root )
+  
 
 ####################################################################################################
 
